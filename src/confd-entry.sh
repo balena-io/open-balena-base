@@ -13,9 +13,20 @@ fi
 # Set some typical missing env variables (like BALENA_API_HOST) deriving them from BALENA_TLD.
 # Used in BoB.
 /usr/bin/configure-balena-host-envvars.sh
+
 set -a
 # It's an optional step, ok to fail.
 source /etc/docker.env 2>/dev/null && echo "info: Missing typical variables are set using BALENA_TLD"
 set +a
+
+# Set up certificate pointed to by BALENA_ROOT_CA
+/usr/sbin/configure-balena-root-ca.sh
+
+if [[ "$CONFD_BACKEND" = "ENV" ]]; then
+  /usr/local/bin/confd -onetime -confdir=/usr/src/app/config/confd -backend env || exit 1
+  set -a
+  source /usr/src/app/config/env >/dev/null && echo "info: Sourcing /usr/src/app/config/env"
+  set +a
+fi
 
 exec $@
