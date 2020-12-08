@@ -1,4 +1,30 @@
 - commits:
+    - subject: Configure root ca from env var
+      hash: 0d670011ae43efb1670a506a0c532fcefb4a4c7e
+      body: |
+        required for feature parity with the systemd variant
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Robert Günzler <robertg@balena.io>
+        signed-off-by: Robert Günzler <robertg@balena.io>
+      author: Robert Günzler
+      nested: []
+    - subject: Run confd before starting up when CONFD_BACKEND=ENV is set.
+      hash: 1fc90c737f31785b8687b1853acc7f1efeecd4f0
+      body: |
+        This is required to port open-balena services over to the non-systemd
+        base-image variant.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Robert Günzler <robertg@balena.io>
+        signed-off-by: Robert Günzler <robertg@balena.io>
+      author: Robert Günzler
+      nested: []
+  version: 11.1.0
+  date: 2020-12-08T19:48:41.763Z
+- commits:
     - subject: Update nodejs to 14.15.1
       hash: cf533d8fa978bddd6650f129a010b285be485070
       body: ''
