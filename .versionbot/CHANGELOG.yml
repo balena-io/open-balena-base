@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test trivy
+      hash: 9599751ce2901ba96a6c8e8345f71699db965f92
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stathis Moraitidis <stathis@balena.io>
+        signed-off-by: Stathis Moraitidis <stathis@balena.io>
+      author: Stathis
+      nested: []
+  version: 11.1.3
+  date: 2021-05-12T13:09:00.933Z
+- commits:
     - subject: Update nodejs to 14.16.1 and npm to 6.14.12
       hash: 602c54358898ca38005824c748a0682df814d5a8
       body: ''
